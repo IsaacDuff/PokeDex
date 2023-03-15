@@ -29,4 +29,15 @@ export class PokemonsController {
             Pop.error(error)
         }
     }
+
+    async selectPokemon(name) {
+        try {
+            console.log('selected', name);
+            await pokemonsService.selectPokemon(name)
+
+        } catch (error) {
+            console.error(error)
+            Pop.error(error)
+        }
+    }
 }

@@ -9,11 +9,16 @@ const poke = axios.create({
 class PokemonsService {
 
     async getAllPokemon() {
-        const res = await poke.get('pokemon?offset=20&limit=20')
+        const res = await poke.get('pokemon?offset=0&limit=20')
         console.log('[Pokemon]', res.data);
         appState.wildPokemon = res.data.results
         console.log(appState.wildPokemon);
 
+    }
+
+    async selectPokemon(name) {
+        const res = await poke.get(`pokemon/${name}`)
+        console.log('chosen pokemon', res.data);
     }
 
 }

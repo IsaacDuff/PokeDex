@@ -7,6 +7,9 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = loadState('values', [Value])
 
+  /** @type {import('./Models/Pokemon').Pokemon[]|null} */
+  activePokemon = null
+
 
   wildPokemon = []
 

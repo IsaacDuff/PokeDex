@@ -15,7 +15,7 @@ export class Pokemon {
         return `
         <div class="row align-items-center bg-white rounded m-2">
         <div class="col-9 fw-bold">${pokemon.name}</div>
-        <div class="col-2"><button class="btn btn-secondary">🪝</button>
+        <div class="col-2"><button class="btn btn-secondary" onclick="app.pokemonsController.selectPokemon('${pokemon.name}')">🪝</button>
         </div>
         </div>
         `
