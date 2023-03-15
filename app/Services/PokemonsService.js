@@ -1,4 +1,5 @@
 import { appState } from "../AppState.js";
+import { Pokemon } from "../Models/Pokemon.js";
 
 const poke = axios.create({
     baseURL: 'https://pokeapi.co/api/v2/'
@@ -19,6 +20,7 @@ class PokemonsService {
     async selectPokemon(name) {
         const res = await poke.get(`pokemon/${name}`)
         console.log('chosen pokemon', res.data);
+        appState.activePokemon = new Pokemon(res.data)
     }
 
 }

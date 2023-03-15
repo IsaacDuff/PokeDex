@@ -1,1 +1,7 @@
 /* BASIC STYLES HERE */
+
+main {
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/040/460/755/large/wesley-gardner-mtg-forest1.jpg?1628913431);
+    background-position: center;
+    background-size: cover;
+}
