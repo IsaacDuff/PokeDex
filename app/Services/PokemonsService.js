@@ -18,9 +18,12 @@ class PokemonsService {
     }
 
     async selectPokemon(name) {
+        console.log('getting name', name);
         const res = await poke.get(`pokemon/${name}`)
         console.log('chosen pokemon', res.data);
         appState.activePokemon = new Pokemon(res.data)
+        console.log('set active', appState.activePokemon);
+        appState.emit('activePokemon')
     }
 
 }
